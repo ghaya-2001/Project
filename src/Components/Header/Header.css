@@ -1,0 +1,56 @@
+.header{
+    
+    justify-content: space-between; 
+    margin-right: 5rem;
+    margin-left: 5rem;
+   
+    
+}
+
+.users > ul > li:hover{
+    cursor: pointer;
+    color: var(--orange);
+}
+.i-button{
+    
+    flex: 2;
+    box-shadow: var(--boxShadow);
+    left: 100rem;
+    margin-top: 10px;
+    
+}
+.titre{
+    align-self: center;
+}
+.users{
+
+  align-self: center;
+   
+}
+
+.user{
+   
+    border-width: 2rem;
+    margin-bottom: 40px;
+    
+  
+   
+    
+}
+
+.name{
+    margin-left: 20rem;
+}
+.id{
+    margin-left: 20rem;
+}
+.email{
+    margin-left: 20rem;
+}
+.img{
+   
+    width: 15rem;
+    margin-left: 20rem;
+    
+}
+
