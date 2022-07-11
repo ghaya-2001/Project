@@ -7,9 +7,10 @@ function App() {
   return (
 
 
-  
+
     <div className='App'>
-       
+        {/*colors */ }
+      
        <div className="blur s-blur2" style={{background:'#b094ff',top:"4rem",left:"10px",width:"90rem"}}></div>
        
      
