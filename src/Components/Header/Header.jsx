@@ -1,27 +1,36 @@
 
 import './Header.css'
 import user from '../../img/user.png';
+import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState} from 'react';
 
 
-import React, {
- useEffect, useState} from 'react';
+
+
+
 const Header=() =>{
     const [users,setusers]=useState([{}])
-    
-    function Heady(){
+   {/*useffect*/}
+    function Heady()
+      {
+
         fetch("https://jsonplaceholder.typicode.com/users") /*nedina api*/
         .then(response => response.json()) /*reponse json */
         .then(response => setusers(response /*7atineh f west users list*/ ))
             
             
-      
-    
 
       
        }
-  useEffect(() => {Heady()},[])
+    useEffect(() => {Heady()},[])
 
-    
+  {/* useNavigate hook*/ }  
+
+    const navigate = useNavigate();
+  /**/
+  
+
+
     return(
 
       
@@ -38,12 +47,12 @@ const Header=() =>{
                         
                        <td> <img className="img"src={user} alt=''/></td>
                         <td>
-                       
                         <div className="name">USER : {element.name}</div>
                         <div className='email'> EMAIL : {element.email}</div>
                         <div className="id">ID : {element.id}</div>
-                        <button className="button i-button">see details</button>
-                        </td></tr>
+                        <button className="button i-button"onClick={()=>{navigate("/Posts")}}>see details</button>
+                        </td>      
+                   </tr>
                      
                   </table>
                   ))}
