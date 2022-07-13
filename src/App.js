@@ -17,7 +17,7 @@ function App() {
         </Routes>
 
     </Router>
-    <div className="blur s-blur2" style={{background:'#b094ff',top:"20%",left:"10px",width:"90rem"}}></div>
+        <div className="blur s-blur2" style={{background:'#b094ff',top:"20%",left:"10px",width:"90rem"}}></div>
        
    
     </div>
