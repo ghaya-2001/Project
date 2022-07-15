@@ -28,7 +28,14 @@ const Header=() =>{
 
     const navigate = useNavigate();
   /**/
-  
+  const userposts=(headerId)=>{
+      navigate('/Posts',
+      {
+        state:{
+            headerId
+        }}) 
+      
+      }
 
 
     return(
@@ -50,7 +57,7 @@ const Header=() =>{
                         <div className="name">USER : {element.name}</div>
                         <div className='email'> EMAIL : {element.email}</div>
                         <div className="id">ID : {element.id}</div>
-                        <button className="button i-button"onClick={()=>{navigate("/Posts")}}>see details</button>
+                        <button className="button i-button" onClick={()=>{userposts(element.id)}}>see details</button>
                         </td>      
                    </tr>
                      
