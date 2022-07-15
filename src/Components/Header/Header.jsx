@@ -54,10 +54,10 @@ const Header=() =>{
                         
                        <td> <img className="img"src={user} alt=''/></td>
                         <td>
-                        <div className="name">USER : {element.name}</div>
-                        <div className='email'> EMAIL : {element.email}</div>
-                        <div className="id">ID : {element.id}</div>
-                        <button className="button i-button" onClick={()=>{userposts(element.id)}}>see details</button>
+                        <div className="name">{element.name}</div>
+                        <div className='email'>{element.email}</div>
+                       
+                        <button className="button i-button" onClick={()=>{userposts(element.id)}}>see posts</button>
                         </td>      
                    </tr>
                      

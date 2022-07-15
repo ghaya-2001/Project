@@ -3,6 +3,7 @@ import './App.css';
 
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Posts from "./Components/Posts/Posts";
+import Comments from "./Components/Comments/Comments";
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
           
           <Route path="/Posts" element={<Posts/>}/>
           <Route path="/" element={<Header/>}/>
+          <Route path="/Comments" element={<Comments/>}/>
         </Routes>
 
     </Router>

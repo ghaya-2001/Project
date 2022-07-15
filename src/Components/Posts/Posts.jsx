@@ -1,9 +1,7 @@
 
 import './Posts.css'
 import React, { useEffect, useState} from 'react';
-import { prettyDOM } from '@testing-library/react';
-import Header from '../Header/Header';
-import { useLocation } from 'react-router-dom';
+import { useLocation ,useNavigate} from 'react-router-dom';
 const Posts =() =>{
    /* let navigate=useNavigate()*/
    /**import { useNavigate } from 'react-router-dom'; */
@@ -24,11 +22,24 @@ const Posts =() =>{
         useEffect(() => {Posts()},[])
        /*hook useLocation */
        const location =useLocation();
+       /*useNavigate*/
+       const navigate = useNavigate();
+
+
+       const postComments=(Id)=>{
+        navigate('/Comments',
+        {
+          state:{
+              Id
+          }}) 
+        
+        }
+
 
 
     return(
         <div className='posts'>
-            <h1 className='titre'>POSTS</h1>
+        <p className='titre'>POSTS</p>
         {posts.map((po) => {
           if (po.userId==location.state.headerId){
           return(
@@ -36,13 +47,13 @@ const Posts =() =>{
 
 
 <div className='users'>
-<div className='user'> 
+<div className='post'> 
      
      
-     <div className="name">USERID : {po.userId}</div>
-     <div className='email'> TITLE : {po.title}</div>
-     <div className="id">ID : {po.id}</div>
-     <button className="button i-button" >see comments</button>
+     
+     <div className='title'>  {po.title}</div>
+     <div className="body"> {po.body}</div>
+     <button className="button" onClick={()=>{postComments(po.id)}}>see comments</button>
            
   
 </div>

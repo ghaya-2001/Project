@@ -3,48 +3,64 @@
     justify-content: space-between; 
     margin-right: 5rem;
     margin-left: 5rem;
+    align-self: center;
+    position: absolute;
+    top:10%
    
     
 }
 
-.users > ul > li:hover{
-    cursor: pointer;
-    color: var(--orange);
-}
-.i-button{
+
+button{
     
     flex: 2;
     box-shadow: var(--boxShadow);
-    left: 100rem;
+    
     margin-top: 10px;
+  
+   border-radius: 34px;
+   border: none ;
+   color: white;
+   font-size: 16px;
+   padding: 11px 26px 11px 26px ;
+   background:linear-gradient(180deg,#e780b2 26.71% ,#e519e2 99.36%);
+   box-shadow: 0px 20px 24px 3px rgba(117, 212, 233, 0.42);
+    
+
     
 }
+.button:hover{
+    background: white;
+    cursor: pointer;
+    color:var(--orange);
+    border: 1px solid var(--orange);
+  } 
 .titre{
     align-self: center;
-}
-.users{
-
-  align-self: center;
-   
+    margin-bottom: 10%;
+    font-size: 50px;
+    font-weight: bold;
 }
 
-.user{
-   
-    border-width: 2rem;
-    margin-bottom: 40px;
+.title{
+    font-weight: bold;
+}
+
+.post{
+    border-style: solid;
+border-width: 1px;
+border-color: black;
+margin-bottom: 10%;
+padding: 2%;
+border-radius: 20px;
+box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+margin-right: 25%;
+    margin-left:25%;
+}
+.body{
+    margin-bottom: 5%;
     
-  
-   
-    
 }
 
-.name{
-    margin-left: 20rem;
-}
-.id{
-    margin-left: 20rem;
-}
-.email{
-    margin-left: 20rem;
-}
 
