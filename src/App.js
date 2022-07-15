@@ -13,7 +13,7 @@ function App() {
         <Routes>
           
           <Route path="/Posts" element={<Posts/>}/>
-          <Route path="/Header" element={<Header/>}/>
+          <Route path="/" element={<Header/>}/>
         </Routes>
 
     </Router>
