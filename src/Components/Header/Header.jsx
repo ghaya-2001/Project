@@ -14,7 +14,7 @@ const Header=() =>{
     function Heady()
       {
 
-        fetch("https://jsonplaceholder.typicode.com/users") /*nedina api*/
+        fetch("http://localhost:3000/api/getAll",) /*nedina api*/
         .then(response => response.json()) /*reponse json */
         .then(response => setusers(response /*7atineh f west users list*/ ))
             
