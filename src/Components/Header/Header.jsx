@@ -14,9 +14,9 @@ const Header=() =>{
     function Heady()
       {
 
-        fetch("http://localhost:3000/api/getAll",) /*nedina api*/
+        fetch("http://localhost:3000/api/getAll") /*nedina api*/
         .then(response => response.json()) /*reponse json */
-        .then(response => setusers(response /*7atineh f west users list*/ ))
+        .then(response => console.log(response /*7atineh f west users list*/ ))
             
             
 
@@ -57,7 +57,7 @@ const Header=() =>{
                         <div className="name">{element.name}</div>
                         <div className='email'>{element.email}</div>
                        
-                        <button className="button i-button" onClick={()=>{userposts(element.id)}}>see posts</button>
+                        <button className="button i-button" onClick={()=>{userposts(element._id)}}>see posts</button>
                         </td>      
                    </tr>
                      
