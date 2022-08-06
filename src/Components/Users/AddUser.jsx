@@ -1,4 +1,4 @@
-import './AddUser.css'
+
 import React from 'react'
 
 import { useState } from 'react'
@@ -12,21 +12,23 @@ const AddUser=() =>{
     const[email,setemail]=useState("")
     function add(){
       
-        fetch("http://localhost:3000/api/post", 
+        fetch("http://localhost:3000/user", 
         { 
             method:"POST",
             headers: {
-                'Content-Type': 'application/json,  text/plain, */*'
+                'Content-Type': 'application/json'
             },
-            mode: 'cors',
+            
             body:JSON.stringify({
-                name:"ghaya",
-                email:"ghayaderbali20@gmail.com",
+                name:name,
+                email:email
             })
         }).then(function(res){ console.log(res) })
-        .catch(function(res){ console.log(res) })
-       
+        .catch(function(res){ console.log(res) });
+        
+       window.location.reload(false);
     }
+
 
 
 
@@ -42,11 +44,14 @@ const AddUser=() =>{
         <div className="c-right">
 
            
-                
-                <input type="text" name='user_name' className='user'placeholder='Name'/>
-                <input type="email" name='user_email' className='user'placeholder='Email'/>
-                
-                <input type="submit" value="Add" className='button' onClick={()=>{add()}}/>
+             <table>
+                <tr>
+                <input type="text" name='user_name' className='user'placeholder='Name'onChange={val=>{setname(val.target.value)}}/></tr>
+                <tr>
+                <input type="email" name='user_email' className='user'placeholder='Email'onChange={val=>{setemail(val.target.value)}}/></tr>
+                <tr>
+                <input type="submit" value="Add" className='button' onClick={()=>{add()}}/></tr>
+                </table>   
                 
                 <div className="blur c-blur1" style={{background:'var(--purple)',}}></div>
                

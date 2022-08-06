@@ -1,8 +1,7 @@
 .header{
     
     justify-content: space-between; 
-    margin-right: 5rem;
-    margin-left: 5rem;
+   
    
     
 }
@@ -21,6 +20,8 @@
 }
 .titre{
     align-self: center;
+    text-align: center;
+    margin-left: 7rem;
 }
 .users{
 
@@ -51,7 +52,7 @@
 }
 .img{
    
-    width: 15rem;
+    width: 10rem;
     margin-left: 20rem;
     
 }

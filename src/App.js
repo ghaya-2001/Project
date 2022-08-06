@@ -1,10 +1,10 @@
-import Header from "./Components/Header/Header";
+import Users from "./Components/Users/Users";
 import './App.css';
 
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Posts from "./Components/Posts/Posts";
 import Comments from "./Components/Comments/Comments";
-import AddUser from "./Components/AddUser/AddUser";
+
 
 function App() {
   
@@ -15,9 +15,9 @@ function App() {
         <Routes>
           
           <Route path="/Posts" element={<Posts/>}/>
-          <Route path="/" element={<Header/>}/>
+          <Route path="/" element={<Users/>}/>
           <Route path="/Comments" element={<Comments/>}/>
-          <Route path="/AddUser" element={<AddUser/>}/>
+          
         </Routes>
 
     </Router>

@@ -1,28 +1,29 @@
 
-import './Header.css'
+import './Users.css'
 import user from '../../img/user.png';
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState} from 'react';
+import AddUser from './AddUser';
+import  './AddUser.css'
 
 
 
 
-
-const Header=() =>{
+const Users=() =>{
     const [users,setusers]=useState([{}])
    {/*useffect*/}
-    function Heady()
+    function use()
       {
 
-        fetch("http://localhost:3000/api/getAll") /*nedina api*/
+        fetch("http://localhost:3001/user") /*nedina api*/
         .then(response => response.json()) /*reponse json */
-        .then(response => console.log(response /*7atineh f west users list*/ ))
+        .then(response => setusers(response))
             
             
 
       
        }
-    useEffect(() => {Heady()},[])
+    useEffect(() => {use()},[])
 
   {/* useNavigate hook*/ }  
 
@@ -56,6 +57,7 @@ const Header=() =>{
                         <td>
                         <div className="name">{element.name}</div>
                         <div className='email'>{element.email}</div>
+                        
                        
                         <button className="button i-button" onClick={()=>{userposts(element._id)}}>see posts</button>
                         </td>      
@@ -64,6 +66,7 @@ const Header=() =>{
                   </table>
                   ))}
     </div>
+    <AddUser/>
             </div>
            
             
@@ -77,4 +80,4 @@ const Header=() =>{
         
     )}
 
-    export default Header  
+    export default Users  
